@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+#banner {
+    background-color: rgb(43, 43, 43);
+    height: 220px;
+}
+#banner_line {
+    margin: 0;
+}
+#logo {
+    width: 25%;
+    align-self: left;
+    text-align: right;
+}
