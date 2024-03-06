@@ -1,15 +1,38 @@
 body {
     margin: 0;
+    background-image: url(images/olayinka-babalola-r01ZopTiEV8-unsplash\ \(1\).jpg);
+    background-size: cover;
 }
 #banner {
     background-color: rgb(43, 43, 43);
-    height: 220px;
+    height: 240px;
+    width: auto;
 }
 #banner_line {
-    margin: 0;
+    position: absolute;
+    top: 3px;
+    left: 275px;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 100px;
+    color: white;
 }
 #logo {
-    width: 25%;
+    width: 250px;
     align-self: left;
     text-align: right;
+}
+
+#head_paragraph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(242, 83, 83);
+    width: 1200px;
+    height: 500px;
+    border-radius: 40px;
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    margin-top: 20px;
 }
