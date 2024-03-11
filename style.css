@@ -27,7 +27,9 @@ body {
     align-self: left;
     text-align: right;
 }
-
+#logo img {
+    cursor: pointer;
+}
 #head_paragraph {
     display: flex;
     align-items: center;
@@ -121,3 +123,18 @@ body {
     border-radius: 5px;
 }
 
+#menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 40px;
+    font-size: 25px;
+    font-family: "consolas", monospace
+}
+
+.menu-subsection {
+    background-color: rgb(255, 206, 206);
+    width: 300px;
+    height: fit-content;
+    border: hidden;
+    border-radius: 5px;
+}
