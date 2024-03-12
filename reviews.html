@@ -27,7 +27,95 @@
             </ul>
         </nav>
     </div>
+    <h2>Hear From Our Satisfied Customers:</h2> 
+    <!-- <script>
+        var currentReview = 1;
+        var totalReviews = 4;
+    
+        function showReviews() {
+            var offset = (currentReview - 1) * -33.33; // Calculate the offset based on the current review
+            for (var i = 1; i <= totalReviews; i++) {
+                var review = document.getElementById("review" + i);
+                review.style.transform = `translateX(${offset}%)`; // Slide the reviews
+            }
+        }
 
-   
+    
+        function moveReviews(step) {
+            currentReview += step;
+            if (currentReview > totalReviews - 2) {
+                currentReview = 1;
+            } else if (currentReview < 1) {
+                currentReview = totalReviews - 2;
+            }
+            showReviews();
+        }
+    
+        showReviews();
+        setInterval(function() { moveReviews(1); }, 5000); // Change reviews every 5 seconds
+    </script>     -->
+    <script>
+        var currentReview = 1;
+        var totalReviews = 4;
+    
+        // function showReviews() {
+        //     var offset = (currentReview - 1) * -33.33; // Calculate the offset based on the current review
+        //     for (var i = 1; i <= totalReviews; i++) {
+        //         var review = document.getElementById("review" + i);
+        //         review.style.transform = `translateX(${offset}%)`; // Slide the reviews
+        //     }
+        // }
+        function showReviews() {
+            for (var i = 1; i <= totalReviews; i++) {
+                var review = document.getElementById("review" + i);
+                if (i >= currentReview && i < currentReview + 3) {
+                    review.style.display = "block";
+                } else {
+                    review.style.display = "none";
+                }
+            }
+        }
+
+    
+        // function moveReviews(step) {
+        //     currentReview += step;
+        //     if (currentReview > totalReviews - 1) {
+        //         currentReview = 1;
+        //     } else if (currentReview <= 0) {
+        //         currentReview = totalReviews - 1;
+        //     }
+        //     showReviews();
+        // }
+        function moveReviews(step) {
+            currentReview += step;
+            if (currentReview > totalReviews - 2) {
+                currentReview = 1; // Reset to the first review
+            } else if (currentReview < 1) {
+                currentReview = totalReviews - 2; // Set to show the last three reviews
+            }
+            showReviews();
+        }
+    
+        showReviews();
+        setInterval(function() { moveReviews(1); }, 5000); // Change reviews every 5 seconds
+    </script>
+    
+    <div class="reviews-container">
+        <div class="review-column" id="review1">
+            <p>"Zesty's is a hidden gem! The Bread Basket was warm and delicious, and the Antipasto Platter was a perfect start to our meal. The Spaghetti Carbonara was creamy and flavorful, making it a standout dish. Definitely a 5-star experience!" <br><br>- Paul G.</p>
+        </div>
+        <div class="review-column" id="review2">
+            <p>"Had a delightful experience at Zesty's. The Caesar Salad was fresh and crisp, and the Fried Calamari was perfectly cooked. The Boar Gnocci was a unique and tasty dish. Would highly recommend!" <br><br>- Tricia M.</p>
+        </div>
+        <div class="review-column" id="review3">
+            <p>"Zesty's exceeded my expectations! The Antipasto Platter was a great mix of flavors, and the Cacio e Pepe was simple yet delicious. The service was impeccable. Definitely coming back!" <br><br>- Peter H.</p>
+        </div>
+        <div class="review-column" id="review4" style="display: none;">
+            <p>"A fantastic dining experience at Zesty's! The Bread Basket was a great start, and the Zesty's Famous Lasagna was rich and flavorful. The ambiance was cozy and inviting. Will definitely be back for more!" <br><br>- Tony A.</p>
+        </div>
+        <button id="prev" onclick="moveReviews(-1)">&#10094;</button>
+        <button id="next" onclick="moveReviews(1)">&#10095;</button>
+    </div>    
+
 </body>
 </html>
