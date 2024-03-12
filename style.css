@@ -7,22 +7,23 @@ body {
 }
 #banner {
     background-color: rgb(43, 43, 43);
-    height: 240px;
+    height: 175px;
     width: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
 #banner_line {
     position: absolute;
-    top: 50px;
+    top: 20px;
     left: 285px;
     font-family: 'Major Mono Display', monospace;
     font-size: 60px;
     color: white;
 }
 #logo {
-    width: 250px;
+    width: 150px;
     align-self: left;
     text-align: right;
 }
@@ -32,7 +33,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: rgb(242, 83, 83);
-    width: 90vw;
+    width: 1200px;
     height: 500px;
     border-radius: 40px;
     font-size: 60px;
@@ -46,6 +47,7 @@ body {
     margin: 0;
     background-color: rgb(43, 43, 43);
     text-align: center;
+    padding: 5px 5px 5px 40px;
 
 }
 
@@ -67,7 +69,7 @@ body {
 }
 
 #banner nav .active{
-    color: rgb(242, 83, 83); /* Change the active link color as needed */
+    color: rgb(242, 83, 83); 
 }
 .contact-container {
     display: flex;
@@ -114,59 +116,124 @@ body {
 .contact-form button {
     cursor: pointer;
     padding: 10px 20px;
-    background-color: rgb(182, 62, 62); /* Change button color as needed */
+    background-color: rgb(182, 62, 62); 
     color: white;
     border: none;
     border-radius: 5px;
 }
 
-#menu-container {
-    display: grid;
-    justify-content: space-evenly;
-    justify-items: center;
-    align-content: space-evenly;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 40px;
-    font-size: 25px;
-    font-family: "consolas", monospace;
+
+.reservation-form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    color: black; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-.menu-subsection {
-    background-color: rgb(255, 173, 173);
-    width: 600px;
-    height: fit-content;
-    border:none;
-    border-radius: 20px;
+.reservation-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reservation-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-form-container label {
+    margin-bottom: 5px;
+}
+
+.reservation-form-container input[type="text"],
+.reservation-form-container input[type="email"],
+.reservation-form-container input[type="tel"],
+.reservation-form-container input[type="date"],
+.reservation-form-container input[type="time"],
+.reservation-form-container input[type="number"],
+.reservation-form-container textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc; 
+}
+
+.reservation-form-container button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: rgb(242, 83, 83); 
+    color: white;
+    border: none;
+    border-radius: 5px;
     margin-top: 10px;
-    padding-top: 20px;
-    padding-left: 25px;
-    padding-right: 20px;
-}
-@media only screen and (max-width: 1300px) {
-    #menu-container {
-        margin-top: 100px;
-    }
-    .menu-subsection {
-        width: 400px;
-    }
+    padding-top: 10px;
 }
 
-@media only screen and (max-width: 910px) {
-    #menu-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-.menu-subsection ul {
-    font-weight: bold;
-}
-.food-descriptions {
-    font-weight: normal;
+
+/* .reviews-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: white;
+    color: black; 
+    border-radius: 20px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+} */
+
+.reviews-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensure all reviews are the same height */
+    margin: 60px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: white;
+    color: black; 
+    border-radius: 20px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
-.menu-head {
-    font-weight: bolder;
-    font-family: "Major Mono Display", monospace;
+.review-column {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(242, 83, 83);
+    color: white; 
+    border-radius: 10px;
+    width: 33.33%;
+    transition: transform 0.5s ease;
 }
-.menu-subsection li {
-    margin-bottom: 25px;
+
+.review-column p {
+    margin: 5px 0;
+}
+
+#prev, #next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
 }
