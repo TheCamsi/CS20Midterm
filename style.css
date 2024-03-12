@@ -170,3 +170,18 @@ body {
 .menu-subsection li {
     margin-bottom: 25px;
 }
+
+#options {
+    display: grid;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#options img {
+    border-radius: 20px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}
