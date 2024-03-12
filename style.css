@@ -12,7 +12,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 #banner_line {
     position: absolute;
@@ -27,9 +26,7 @@ body {
     align-self: left;
     text-align: right;
 }
-#logo img {
-    cursor: pointer;
-}
+
 #head_paragraph {
     display: flex;
     align-items: center;
@@ -125,16 +122,38 @@ body {
 
 #menu-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    grid-template-columns: repeat(2, 1fr);
     margin-top: 40px;
     font-size: 25px;
-    font-family: "consolas", monospace
+    font-family: "consolas", monospace;
 }
 
 .menu-subsection {
-    background-color: rgb(255, 206, 206);
-    width: 300px;
+    background-color: rgb(255, 173, 173);
+    width: 600px;
     height: fit-content;
-    border: hidden;
-    border-radius: 5px;
+    border:none;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-right: 20px;
+}
+
+.menu-subsection ul {
+    font-weight: bold;
+}
+.food-descriptions {
+    font-weight: normal;
+}
+
+.menu-head {
+    font-weight: bolder;
+    font-family: "Major Mono Display", monospace;
+}
+.menu-subsection li {
+    margin-bottom: 25px;
 }
