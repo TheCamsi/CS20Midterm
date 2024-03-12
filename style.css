@@ -142,7 +142,20 @@ body {
     padding-left: 25px;
     padding-right: 20px;
 }
+@media only screen and (max-width: 1300px) {
+    #menu-container {
+        margin-top: 100px;
+    }
+    .menu-subsection {
+        width: 400px;
+    }
+}
 
+@media only screen and (max-width: 910px) {
+    #menu-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 .menu-subsection ul {
     font-weight: bold;
 }
