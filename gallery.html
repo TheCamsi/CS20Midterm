@@ -11,14 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
 <style>
-    #banner {
+#banner {
     background-color: rgb(43, 43, 43);
     height: 240px;
     width: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    padding-bottom: 20px;
+    align-items: center;
 }
 #banner_line {
     position: absolute;
@@ -59,12 +60,13 @@
 }
 
 #banner nav .active{
-    color: rgb(242, 83, 83); /* Change the active link color as needed */
+    color: rgb(242, 83, 83); 
 }
 div.scroll-container {
     overflow: auto;
     white-space: nowrap;
     padding: 10px;
+    margin-top: 20px;
 }
 div.scroll-container img {
     padding: 10px;
@@ -93,6 +95,7 @@ body{
     background-color:rgb(242, 83, 83);
     background-size: cover;
     margin: 0px;
+    font-family: "consolas", monospace;
 }
 #head_paragraph2 {
     display: flex;
@@ -106,8 +109,106 @@ body{
     text-align: center;
     color: white;
     margin: 0 auto;
-    margin-top: 60px;
 }
+h2 {
+    font-family: "consolas", monospace;
+    margin: auto;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 5%;
+}
+
+@media (max-width: 1024px) {
+    #banner_line {
+        font-size: 48px; 
+        left: 200px; 
+    }
+
+    #logo {
+        width: 200px; 
+    }
+
+    #nav a {
+        font-size: 32px; 
+        margin-right: 10px; 
+    }
+
+    div.image-container img {
+        height: 450px; 
+    }
+
+    div.image-label {
+        font-size: 16px
+    }
+}
+
+@media (max-width: 768px) {
+    #banner {
+        flex-direction: column; 
+        height: auto; 
+    }
+
+    #banner_line {
+        font-size: 36px;
+        top: 20px;
+        left: 50%; 
+        transform: translateX(-50%); 
+    }
+
+    #nav ul {
+        display: block; 
+    }
+
+    #nav li {
+        display: block;
+        margin-right: 0;
+    }
+
+    #nav a {
+        font-size: 24px;
+        display: block; 
+        padding: 10px 0;
+    }
+
+    div.image-container img {
+        height: 300px; /* Further reduce the image height */
+    }
+
+    div.image-label {
+        font-size: 14px;
+    }
+
+    div.scroll-container {
+        margin-top: 10px; /* Reduce the top margin */
+    }
+}
+
+@media (max-width: 480px) {
+    #banner_line {
+        font-size: 24px; /* Further reduce the font size */
+    }
+
+    #logo {
+        width: 150px; /* Further reduce the logo size */
+    }
+
+    #nav a {
+        font-size: 20px; /* Further reduce the font size */
+        padding: 8px 0; /* Adjust the padding */
+    }
+
+    div.image-container img {
+        height: 200px; /* Further reduce the image height */
+    }
+
+    div.image-label {
+        font-size: 12px; /* Further reduce the font size */
+    }
+}
+
+
 </style>
 <body>
     <div id="banner">
@@ -125,11 +226,9 @@ body{
             </ul>
         </nav>
     </div>
-    <div id="head_paragraph2">
+    <!-- <div id="head_paragraph2">
         <h2>Gallery</h2>
-    </div>
-
-
+    </div> -->
     <div style="height:50px;"></div>
     <div class="scroll-container">
         <div class="image-container">
