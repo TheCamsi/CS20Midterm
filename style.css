@@ -8,7 +8,7 @@ body {
 #banner {
     background-color: rgb(43, 43, 43);
     height: 240px;
-    width: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -256,4 +256,88 @@ body {
 #title-container {
     display: flex;
     justify-content: center;
+}
+@media (max-width: 600px) {
+    #banner {
+        width: 100%;
+        height: 100px;
+    }
+    #banner_line {
+        top: 25px;
+        left: 35%;
+        font-size: 15px;
+    }
+
+    #logo {
+        width: 100px;
+    }
+
+    #head_paragraph, #head_paragraph2, #head_paragraph3 {
+        width: 80vw;
+        height: auto;
+        font-size: 10px;
+        margin-top: 30px;
+    }
+
+    #mission-statement {
+        margin-top: 60px;
+        font-size: 10px;
+    }
+
+    #nav a {
+        font-size: 14px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, .contact-form {
+        width: 90%;
+    }
+
+    .contact-info h2, .contact-form h2 {
+        font-size: 20px;
+    }
+
+    .contact-form label {
+        font-size: 18px;
+    }
+
+    .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+        font-size: 18px;
+    }
+
+    .contact-form button {
+        font-size: 20px;
+    }
+
+    #menu-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .menu-subsection {
+        width: 75vw;
+    }
+
+    .menu-head {
+        font-size: 20px;
+    }
+
+    .menu-subsection li {
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    #options img {
+        width: 80vw;
+    }
+
+    #image-title {
+        font-size: 30px;
+        width: 90vw;
+        margin-top: 20px;
+        height: 100px;
+    }
 }
