@@ -341,3 +341,94 @@ body {
         height: 100px;
     }
 }
+
+.reservation-form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    color: black; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.reservation-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reservation-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-form-container label {
+    margin-bottom: 5px;
+}
+
+.reservation-form-container input[type="text"],
+.reservation-form-container input[type="email"],
+.reservation-form-container input[type="tel"],
+.reservation-form-container input[type="date"],
+.reservation-form-container input[type="time"],
+.reservation-form-container input[type="number"],
+.reservation-form-container textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc; 
+}
+
+.reservation-form-container button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: rgb(242, 83, 83); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+#title-container {
+    display: flex;
+    justify-content: center;
+}
+
+.reviews-container {
+    display: flex;
+    max-width: 1200px;
+    background-color: rgb(242, 83, 83);
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.review-box {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 40%;
+    border: 1px solid #000000;
+    padding: 15px;
+    min-height: auto;
+}
+
+h2 {
+    font-family: "consolas", monospace;
+    margin: auto;
+    font-size: 30px;
+    color: rgb(43, 43, 43);
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgb(242, 83, 83);
+    padding-top: 5%;
+}
