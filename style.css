@@ -355,9 +355,22 @@ body {
         margin-top: 60px;
         font-size: 20px;
     }
+    .reviews-container {
+        display: flex;
+        max-width: 1200px;
+        background-color: rgb(242, 83, 83);
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin: auto;
+
+        border-radius: 10px;
+    }
 
     .review-box {
-        width: 80%;
+        width: 80vw;
     }
 
 }
