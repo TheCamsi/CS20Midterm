@@ -32,14 +32,31 @@ body {
     align-items: center;
     justify-content: center;
     background-color: rgb(242, 83, 83);
-    width: 90vw;
+    width: 80vw;
     height: 500px;
     border-radius: 40px;
-    font-size: 60px;
+    font-size: 2vw;
     text-align: center;
     color: white;
     margin: 0 auto;
-    margin-top: 60px;
+    margin-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+#mission-statement {
+    font-family: 'Major Mono Display', monospace;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 60px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 30px
 }
 #nav ul {
     list-style-type: none;
