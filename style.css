@@ -40,7 +40,7 @@ body {
     color: white;
     margin: 0 auto;
     margin-top: 60px;
-    font-family: "Quicksand", sans-serif;
+    font-family: "consolas", monospace;
     padding: 30px;
 }
 #head_paragraph2 {
