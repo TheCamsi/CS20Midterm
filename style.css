@@ -374,7 +374,12 @@ body {
     }
 
 }
-
+#review-header h2{
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 .reservation-form-container {
     max-width: 600px;
     margin: 40px auto;
