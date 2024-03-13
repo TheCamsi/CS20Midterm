@@ -12,8 +12,8 @@ h2 {
     color: rgb(43, 43, 43);
     text-align: center;
     margin-top: 20px;
-    background-color: rgb(242, 83, 83);
-    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding-top: 5%
 }
 
 #banner {
@@ -399,9 +399,19 @@ h2 {
 
     #head_paragraph {
         font-size: 10px;
+        width: 200px;
     }
     
-
+    h2 {
+        font-family: "consolas", monospace;
+        margin: auto;
+        font-size: 30px;
+        color: rgb(43, 43, 43);
+        text-align: center;
+        margin-top: 20px;
+        background-color: rgb(242, 83, 83);
+        padding-top: 5%
+    }
 }
 #review-header h2{
     margin-top: 75px;
