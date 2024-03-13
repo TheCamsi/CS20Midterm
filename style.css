@@ -41,6 +41,7 @@ body {
     margin: 0 auto;
     margin-top: 60px;
     font-family: "Quicksand", sans-serif;
+    padding: 30px;
 }
 #head_paragraph2 {
     display: flex;
@@ -101,7 +102,7 @@ body {
     text-decoration: none;
     color: #fff; 
     font-family: 'Major Mono Display', monospace; 
-    font-size: 30px;
+    font-size: 40px;
     transition: color 0.3s;
 }
 
