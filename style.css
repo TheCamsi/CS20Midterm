@@ -272,13 +272,18 @@ body {
         width: 100px;
     }
 
-    #head_paragraph, #head_paragraph2, #head_paragraph3 {
-        width: 80vw;
+    #head_paragraph, #head_paragraph3 {
+        width: 200px;
         height: auto;
         font-size: 10px;
         margin-top: 30px;
     }
-
+    #head_paragraph2 {
+        width: 200px;
+        height: auto;
+        font-size: 10px;
+        margin-top: 65px;
+    }
     #mission-statement {
         margin-top: 60px;
         font-size: 10px;
