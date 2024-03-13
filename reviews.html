@@ -6,10 +6,24 @@
     <title>Zesty's: Reviews</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <script src='main.js'></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <script>
+        function filterReviews() {
+            var category = document.getElementById("review-category").value;
+            var reviews = document.getElementsByClassName("review-box");
+
+            for (var i = 0; i < reviews.length; i++) {
+                var categories = reviews[i].getAttribute("data-categories").split(", ");
+                if (category === "All" || categories.includes(category)) {
+                    reviews[i].style.display = "block";
+                } else {
+                    reviews[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <div id="banner">
@@ -27,95 +41,50 @@
             </ul>
         </nav>
     </div>
-    <h2>Hear From Our Satisfied Customers:</h2> 
-    <!-- <script>
-        var currentReview = 1;
-        var totalReviews = 4;
+    <h2>Hear From Our Satisfied Customers:</h2>
     
-        function showReviews() {
-            var offset = (currentReview - 1) * -33.33; // Calculate the offset based on the current review
-            for (var i = 1; i <= totalReviews; i++) {
-                var review = document.getElementById("review" + i);
-                review.style.transform = `translateX(${offset}%)`; // Slide the reviews
-            }
-        }
+    <div class="filter-section">
+        <select id="review-category">
+            <option value="All">All</option>
+            <option value="Service">Service</option>
+            <option value="Food">Food</option>
+            <option value="Ambiance">Ambiance</option>
+        </select>
+        <button onclick="filterReviews()">Filter</button>
+    </div>
 
-    
-        function moveReviews(step) {
-            currentReview += step;
-            if (currentReview > totalReviews - 2) {
-                currentReview = 1;
-            } else if (currentReview < 1) {
-                currentReview = totalReviews - 2;
-            }
-            showReviews();
-        }
-    
-        showReviews();
-        setInterval(function() { moveReviews(1); }, 5000); // Change reviews every 5 seconds
-    </script>     -->
-    <script>
-        var currentReview = 1;
-        var totalReviews = 4;
-    
-        // function showReviews() {
-        //     var offset = (currentReview - 1) * -33.33; // Calculate the offset based on the current review
-        //     for (var i = 1; i <= totalReviews; i++) {
-        //         var review = document.getElementById("review" + i);
-        //         review.style.transform = `translateX(${offset}%)`; // Slide the reviews
-        //     }
-        // }
-        function showReviews() {
-            for (var i = 1; i <= totalReviews; i++) {
-                var review = document.getElementById("review" + i);
-                if (i >= currentReview && i < currentReview + 3) {
-                    review.style.display = "block";
-                } else {
-                    review.style.display = "none";
-                }
-            }
-        }
-
-    
-        // function moveReviews(step) {
-        //     currentReview += step;
-        //     if (currentReview > totalReviews - 1) {
-        //         currentReview = 1;
-        //     } else if (currentReview <= 0) {
-        //         currentReview = totalReviews - 1;
-        //     }
-        //     showReviews();
-        // }
-        function moveReviews(step) {
-            currentReview += step;
-            if (currentReview > totalReviews - 2) {
-                currentReview = 1; // Reset to the first review
-            } else if (currentReview < 1) {
-                currentReview = totalReviews - 2; // Set to show the last three reviews
-            }
-            showReviews();
-        }
-    
-        showReviews();
-        setInterval(function() { moveReviews(1); }, 5000); // Change reviews every 5 seconds
-    </script>
-    
     <div class="reviews-container">
-        <div class="review-column" id="review1">
-            <p>"Zesty's is a hidden gem! The Bread Basket was warm and delicious, and the Antipasto Platter was a perfect start to our meal. The Spaghetti Carbonara was creamy and flavorful, making it a standout dish. Definitely a 5-star experience!" <br><br>- Paul G.</p>
+        <div class="review-box" data-categories="Food, Ambiance">
+            <p>"The Bread Basket and Fried Calamari were a delightful start to our meal. Paired with the cozy ambiance, our dining experience at Zesty's was unforgettable!"<br> -Sarah H.</p>
         </div>
-        <div class="review-column" id="review2">
-            <p>"Had a delightful experience at Zesty's. The Caesar Salad was fresh and crisp, and the Fried Calamari was perfectly cooked. The Boar Gnocci was a unique and tasty dish. Would highly recommend!" <br><br>- Tricia M.</p>
+        <div class="review-box" data-categories="Food, Service">
+            <p>"The Boar Gnocchi and Zesty's Famous Lasagna were mouthwatering. The attentive service made our evening even more special. Highly recommended!"<br> -John D.</p>
         </div>
-        <div class="review-column" id="review3">
-            <p>"Zesty's exceeded my expectations! The Antipasto Platter was a great mix of flavors, and the Cacio e Pepe was simple yet delicious. The service was impeccable. Definitely coming back!" <br><br>- Peter H.</p>
+        <div class="review-box" data-categories="Ambiance, Service">
+            <p>"The warm and inviting ambiance at Zesty's, coupled with the excellent service, made our dinner truly enjoyable. A perfect spot for a romantic evening!"<br> -Peter M.</p>
         </div>
-        <div class="review-column" id="review4" style="display: none;">
-            <p>"A fantastic dining experience at Zesty's! The Bread Basket was a great start, and the Zesty's Famous Lasagna was rich and flavorful. The ambiance was cozy and inviting. Will definitely be back for more!" <br><br>- Tony A.</p>
+        <div class="review-box" data-categories="Food, Ambiance, Service">
+            <p>"From the delicious Cacio e Pepe to the stunning ambiance and outstanding service, Zesty's is a gem that everyone should experience. Can't wait to return!"<br> -Adam S.</p>
         </div>
-        <button id="prev" onclick="moveReviews(-1)">&#10094;</button>
-        <button id="next" onclick="moveReviews(1)">&#10095;</button>
-    </div>    
-
+        <div class="review-box" data-categories="Food">
+            <p>"The Fettuccine Alfredo was creamy and rich, and the Penne all'Arrabbiata had just the right amount of spice. Zesty's knows how to do pasta right!"<br> -Jessica L.</p>
+        </div>
+        <div class="review-box" data-categories="Ambiance">
+            <p>"The elegant and sophisticated ambiance at Zesty's makes it the perfect destination for any special occasion. Truly a feast for the senses!"<br> -Ryan C.</p>
+        </div>
+        <div class="review-box" data-categories="Service">
+            <p>"The service at Zesty's is unmatched. From the moment we walked in, we were treated like royalty. A fantastic dining experience from start to finish!"<br> -Megan P.</p>
+        </div>
+        <div class="review-box" data-categories="Food, Ambiance">
+            <p>"The Risotto ai Frutti di Mare was a seafood lover's dream, and the ambiance of Zesty's transported us straight to Italy. A must-visit for any food enthusiast!"<br> -David R.</p>
+        </div>
+        <div class="review-box" data-categories="Food, Service">
+            <p>"The Tiramisu was a delightful end to our meal, and the service throughout the evening was impeccable. Zesty's never disappoints!"<br> -Laura K.</p>
+        </div>
+        <div class="review-box" data-categories="Ambiance, Service">
+            <p>"The charming ambiance and attentive service at Zesty's made our dining experience one to remember. It's always a pleasure to dine here!"<br> -Brian T.</p>
+        </div>
+        
+    </div>
 </body>
 </html>
