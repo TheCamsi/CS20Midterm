@@ -179,9 +179,38 @@ body {
     grid-template-columns: repeat(3, 1fr);
     margin-top: 50px;
     margin-bottom: 50px;
+    
 }
 
 #options img {
     border-radius: 20px;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+    width: 30vw;
+    transition-property:all;
+    transition-duration: 1s;
+}
+
+#options img:hover {
+    box-shadow: 10px 10px rgba(255, 255, 255, 0.75);
+    width: 35vw;
+}
+#image-title {
+    font-size: 65px;
+    font-weight: bold;
+    font-family: "Major Mono Display", monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 35px;
+    background-color: rgba(0, 0, 0, 0.65);
+    height: 150px;
+    width: 80vw;
+    border-radius: 20px;
+
+}
+
+#title-container {
+    display: flex;
+    justify-content: center;
 }
