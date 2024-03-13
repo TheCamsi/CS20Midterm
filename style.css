@@ -379,7 +379,6 @@ body {
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
-    background-color: white;
     color: black; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
@@ -400,7 +399,10 @@ body {
 .reservation-form-container label {
     margin-bottom: 5px;
 }
-
+#reservation-form {
+    background-color: rgb(182, 62, 62);
+    padding: 10px;
+}
 .reservation-form-container input[type="text"],
 .reservation-form-container input[type="email"],
 .reservation-form-container input[type="tel"],
