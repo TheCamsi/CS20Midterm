@@ -5,6 +5,17 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+h2 {
+    font-family: "consolas", monospace;
+    margin: auto;
+    font-size: 30px;
+    color: rgb(43, 43, 43);
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgb(242, 83, 83);
+    padding-top: 10px;
+}
+
 #banner {
     background-color: rgb(43, 43, 43);
     height: 240px;
@@ -73,7 +84,7 @@ body {
 
 #head
 
-#mission-statement {
+#mission-statement h2{
     color: white;
     font-family: 'Major Mono Display', monospace;
     background-color: rgba(0, 0, 0, 0.65);
@@ -484,16 +495,6 @@ body {
     min-height: auto;
 }
 
-h2 {
-    font-family: "consolas", monospace;
-    margin: auto;
-    font-size: 30px;
-    color: rgb(43, 43, 43);
-    text-align: center;
-    margin-top: 20px;
-    background-color: rgb(242, 83, 83);
-    padding-top: 5%;
-}
 
 .filter-section {
     text-align: center;
