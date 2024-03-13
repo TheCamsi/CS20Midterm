@@ -183,7 +183,7 @@ h2 {
     justify-items: center;
     align-content: space-evenly;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 40px;
+    margin-top: 75px;
     font-size: 25px;
 }
 
