@@ -54,5 +54,44 @@
             <button type="submit">Submit Reservation</button>
         </form>
     </div>
+    <script>
+        document.getElementById("reservation-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+        // Use an associative array to get the vals
+        var formEl = {}
+        // Get the form values
+        formEl["name"] = document.getElementById("name").value;
+        formEl["email"] = document.getElementById("email").value;
+        formEl["phone"] = document.getElementById("phone").value;
+        formEl["date"] = document.getElementById("date").value;
+        formEl["time"] = document.getElementById("time").value;
+        formEl["guests"] = document.getElementById("guests").value;
+
+        // Regex for email validation so no whitespace before or after @ and .
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // Regex for phone number validation
+        // Only want to use US phone numbers
+        var phonePattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+        // Validate the form fields
+        if (formEl["name"] === "") {
+            alert("Please enter your name.");
+        } else if (!emailPattern.test(formEl["email"])) {
+            alert("Please enter a valid email address."); // Use the regex tests for email and phones
+        } else if (!phonePattern.test(formEl["phone"])) {
+            alert("Please enter a valid phone number."); // Use the regex tests for email and phones
+        } else if (formEl["date"] === "") {
+            alert("Please select a date.");
+        } else if (formEl["time"] === "") {
+            alert("Please select a time.");
+        } else if (formEl["guests"] === "" || parseInt(guests) < 1) {
+            alert("Please enter the number of guests (at least 1).");
+        } else {
+            // Didn't catch anything so successful
+            alert("Reservation submitted successfully!");
+        }
+});
+
+    </script>
 </body>
 </html>
