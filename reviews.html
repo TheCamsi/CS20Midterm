@@ -15,6 +15,7 @@
             var reviews = document.getElementsByClassName("review-box");
 
             for (var i = 0; i < reviews.length; i++) {
+                // Use a javascript array
                 var categories = reviews[i].getAttribute("data-categories").split(", ");
                 if (category === "All" || categories.includes(category)) {
                     reviews[i].style.display = "block";
